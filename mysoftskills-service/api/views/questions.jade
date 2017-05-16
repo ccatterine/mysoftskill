@@ -1,0 +1,24 @@
+extends questions_layout
+
+block content
+    div(class="row col s12 card-panel grey lighten-5 ").panel-heading.center
+        h1 #{title}
+    div(class="section scrollspy")
+        for question, i in questionsList
+            div(class="col s12")
+                div(class="row col s6").center
+                    img(src="images/sale.jpg" alt="" width="50" class="circle")
+                    span(class="title") #{i + 1}. #{question.questionName}
+            div(class="input-field col s6").center
+                select(id="sltQuestion#{i + 1}" class="browser-default")
+                    option(value="" disabled selected) Seleccione una Respuesta
+                    option(value="1") #{question.alt1Name}
+                    option(value="2") #{question.alt2Name}
+                    option(value="3") #{question.alt3Name}
+                    option(value="4") #{question.alt4Name}
+        else
+            p sorry, no careers!
+        a(href="#!" class="waves-effect waves-yellow btn" id="btnResults") Ver Resultados
+
+
+

@@ -1,0 +1,34 @@
+extends signin_layout
+
+block content
+    form(method="post" action="/signin" enctype="application/x-www-form-urlencoded")
+        div(class="section white")
+            div(class="row container")
+                div(class="row col s12 card-panel grey lighten-5 ").panel-heading.center
+                    if userLogged
+                        div(class="col s12")
+                            h3 Ya está logueado, click en el boton
+                        div(class="col s12")
+                            div.panel-footer
+                                a(href="/menu") CONTINUAR
+                    else
+                        h1 INGRESAR
+                        div(class="col s4")
+                        div(class="col s4")
+                            div.form-group
+                                label.lblUser(for='inputEmail').left USER EMAIL :
+                                input(type='text' name="email" id='inputEmail' class="form-control")
+                            div.form-group
+                                label.lblUser(for='inputPassword').left CONTRASEÑA :
+                                input(type='password' name="password" id='inputPassword' class="form-control")
+                        div(class="col s4")
+                        div(class="col s12")
+                            div(class="row col s3")
+                            div(class="row col s3").center
+                                div.panel-footer
+                                    input(type="submit" class="btn waves-effect waves-light" value="INGRESAR")
+                            div(class="row col s3").center
+                                form(method="get" action="/signup" enctype="application/x-www-form-urlencoded")
+                                    div.panel-footer
+                                        input(type="submit" class="btn waves-effect waves-light" value="Login With Facebook")
+                            div(class="row col s3")

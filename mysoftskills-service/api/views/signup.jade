@@ -1,0 +1,56 @@
+extends signup_layout
+block content
+    //div(class="parallax-container")
+    //    div(class="parallax")
+    //        img(src="http://lorempixel.com/580/250/nature/1")
+    div(class="section white")
+        form(method="post" action="/signup" enctype="application/x-www-form-urlencoded")
+            div(class="row container")
+                div(class="row col s12 card-panel grey lighten-5 ").panel-heading.center
+                    h1 REGISTRO
+                    div(class="col s4")
+                    div(class="col s4")
+                        div(class="col s12").form-group
+                            form(action="#")
+                                div(class="file-field input-field col s12")
+                                    div(class="btn col s6")
+                                        span SUBIR FOTO
+                                        input(type="file" multiple=)
+                                    div(class="col s6")
+                                        img(width="50%" src="https://ytudedondevienes.files.wordpress.com/2014/04/cintia-moreno.jpg")
+                        div.form-group
+                            label.lblName(for='inputFirstName').left NOMBRES :
+                            input(type='text' name="firstName" id='inputFirstName' class="form-control")
+                        div.form-group
+                            label.lblLastName(for='inputLastName').left APELLIDO :
+                            input(type='text' name="lastName" id='inputLastName' class="form-control")
+                        div.form-group
+                            label.lblUser(for='inputEmail').left EMAIL :
+                            input(type='text' name="email" id='inputEmail' class="form-control")
+                        div.form-group
+                            label.lblPass(for='inputPassword').left CONTRASEÑA :
+                            input(type='password' name="password" id='inputPassword' class="form-control")
+                        div.form-group
+                            div(class="col s6")
+                                label.lblCiclo.left CICLO DE ESTUDIOS:
+                            div(class="col s6")
+                                a(class='dropdown-button btn' data-beloworigin="true" href='#' data-activates='dropdown1') Selecciona...
+                                    ul(id="dropdown1" class="dropdown-content")
+                                        li.a.option(value="1" href="#!") UNO
+                                        li.a.option(value="2" href="#!") DOS
+                                        li.a.option(value="3" href="#!") TRES
+                                        li.a.option(value="4" href="#!") CUATRO
+                                        li.a.option(value="5" href="#!") CINCO
+                            br
+                            br
+                            br
+                    div(class="col s4")
+                    div(class="col s12")
+                        div(class="row col s4").center
+                        div(class="row col s4").center
+                            div.panel-footer
+                                input(type="submit" class="btn waves-effect waves-light" value="INGRESAR")
+                        div(class="row col s4").center
+    //div(class="parallax-container")
+    //    div(class="parallax")
+    //        img(src="http://lorempixel.com/580/250/nature/1")

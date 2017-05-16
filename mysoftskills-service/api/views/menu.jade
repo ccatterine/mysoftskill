@@ -1,0 +1,35 @@
+extends menu_layout
+block content
+    div(class="section white")
+        div(class="row")
+            div(class="row col s10")
+                //h1 Welcome #{email}
+                label(class='dropdown-button blue-text' data-beloworigin="true" data-activates='dropdown2').right #{email}
+                    ul(id="dropdown2" class="dropdown-content")
+                        form(method="post" action="/profile" enctype="application/x-www-form-urlencoded")
+                            div.panel-footer
+                                input(type="submit" class="btn-flat" value="PERFIL")
+                        form(method="get" action="/" enctype="application/x-www-form-urlencoded")
+                            div.panel-footer
+                                input(type="submit" class="btn-flat" value="SALIR")
+            div(class="row container")
+                div(class="row col s12 card-panel grey lighten-5 ").panel-heading.center
+                    h1 MY SOFT SKILLS
+                div(class="row col s12 container")
+                    div(class="row col s4 collection")
+                        a(href="#!" class="collection-item") INICIO
+                        a(href="/essentials_competition" class="collection-item") COMPETENCS ESENCIALES
+                        a(href="#!" class="collection-item") AUTOEVALUACION DE COMPETENCIAS
+                        a(href="#!" class="collection-item") CONSULTAR RESULTADOS
+                        a(href="#!" class="collection-item") DESARROLLO DE COMPETENCIAS
+                        a(href="#!" class="collection-item") DICCIONARIO DE COMPETENCIAS
+                        a(href="#!" class="collection-item") TUTORIAL
+                    div(class="row col s8")
+                        h5.center INICIO
+                        div(class="col s12")
+                            div(class="row col s8")
+                                p Las tarjetas son una forma conveniente de mostrar contenido compuesto de diferentes tipos de objetos. También son muy adecuadas para presentar objetos similares cuyo tamaño o acciones soportadas pueden variar considerablemente, como fotos con subtítulos de longitud variable.
+                            div(class="row col s4 container")
+                                //img(src="http://lorempixel.com/580/250/nature/4")
+                                img(width="150%" src="http://lorempixel.com/580/250/nature/4")
+

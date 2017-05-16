@@ -1,0 +1,19 @@
+extends essentials_competition_layout
+
+block content
+    a(class="dropdown-button btn" href="#" data-activates="dropdown1") Seleccionar Carrera
+    ul(id="dropdown1" class="dropdown-content")
+        for career in careers
+            li.a.option(value="#{career.careerId}" href="#!") #{career.careerName}
+        else
+            li sorry, no careers!
+
+    div(class="row col s10")
+        div.row
+            table(class="striped" id="tableCompetition")
+                tbody(id="tbodyCompetition")
+
+
+
+
+

@@ -1,0 +1,57 @@
+extends graph_layout
+block content
+    div(class="section white")
+        div(class="row")
+            div(class="row col s10")
+                //h1 Welcome #{email}
+                label(class='dropdown-button blue-text' data-beloworigin="true" data-activates='dropdown2').right #{email}
+                    ul(id="dropdown2" class="dropdown-content")
+                        form(method="post" action="/profile" enctype="application/x-www-form-urlencoded")
+                            div.panel-footer
+                                input(type="submit" class="btn-flat" value="PERFIL")
+                        form(method="get" action="/" enctype="application/x-www-form-urlencoded")
+                            div.panel-footer
+                                input(type="submit" class="btn-flat" value="SALIR")
+    div(class="row container")
+        div(class="row col s12 card-panel grey lighten-5 ").panel-heading.center
+            h1 RESULTADOS FINALES
+
+        div(class="row col s12")
+            div(class="row col s6")
+                h7 SELECCIONAR CARRERA :
+            div(class="row col s6")
+                a(class="dropdown-button btn" href="#" data-activates="dropdown1") Seleccionar ...
+                    ul(id="dropdown1" class="dropdown-content")
+                        li.a.option(value="#!" href="#!") Ingenieria Sistemas
+                        li sorry, no careers!
+        div(class="row col s12")
+            div(class="row col s6")
+                h7 SELECCIONAR COMPETENCIA :
+            div(class="row col s6")
+                a(class="dropdown-button btn" href="#" data-activates="dropdown3") Seleccionar ...
+                    ul(id="dropdown3" class="dropdown-content")
+                        li.a.option(value="#!" href="#!") Primer Resultado
+                        li.a.option(value="#!" href="#!") Segundo Resultado
+                        li.a.option(value="#!" href="#!") Tercer Resultado
+        div(class="row col s12" )
+            div(class="row col s2" )
+            div(class="row col s8" )
+                p Escribir Parrafo
+            div(class="row col s2" )
+    div(class="row col s12")
+        div(class="row col s4")
+            div(class="row col s12")
+                div(id="piechart").left
+            div(class="row col s12")
+                h6.center PRIMER RESULTADO
+        div(class="row col s4 ")
+            div(class="row col s12")
+                div(id="piechart2").left
+            div(class="row col s12")
+                h6.center SEGUNDO RESULTADO
+        div(class="row col s4")
+            div(class="row col s12")
+                div(id="piechart3").left
+            div(class="row col s12")
+                h6.center TERCER RESULTADO
+

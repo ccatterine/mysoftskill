@@ -1,0 +1,52 @@
+extends profile_layout
+
+block content
+    //div(class="parallax-container")
+    //    div(class="parallax")
+    //        img(src="http://lorempixel.com/580/250/nature/1")
+    div(class="section white")
+        div(class="row")
+            div(class="row col s10")
+                //h1 Welcome #{email}
+                label(class='dropdown-button blue-text' data-beloworigin="true" href='#' data-activates='dropdown2').right #{email}
+                    ul(id="dropdown2" class="dropdown-content")
+                        //form(method="get" action="/sigin" enctype="application/x-www-form-urlencoded")
+                        div.panel-footer
+                            input(type="submit" class="btn-flat" value="PERFIL")
+                        //form(method="get" action="/" enctype="application/x-www-form-urlencoded")
+                        div.panel-footer
+                            input(type="submit" class="btn-flat" value="SALIR")
+            div(class="row container")
+                div(class="row col s12 card-panel grey lighten-5 ").panel-heading.center
+                    h1 MI PERFIL
+                div(class="col s12").form-group
+                    div(class="col s10")
+                        img(width="10%" src="https://ytudedondevienes.files.wordpress.com/2014/04/cintia-moreno.jpg").right
+                div(class="col s12").form-group.center
+                    div(class="col s2")
+                    div(class="col s8")
+                        div(class="input-field row col s12").center
+                            input(value= "#{fname}" id="txtFirstName" type="text" class="validate").left
+                            label(class="active" for="txtFirstName").left First Name:
+                            //input.left #{fname}
+                            br
+                            br
+                        div(class="input-field row col s12").center
+                            input(value= "#{lname}" id="txtLastName" type="text" class="validate").left
+                            label(class="active" for="txtLastName").left Last Name:
+                            //input.left #{lname}
+                        div(class="input-field row col s12")
+                            input(value= "#{cycle}" id="cycle" type="text" class="validate").left
+                            label(class="active" for="cycle") Cycle:
+                            //label.left #{cycle}
+                    div(class="col s2")
+                div(class="col s12")
+                    div(class="row col s6").center
+                        div.panel-footer
+                            input(type="submit" class="btn waves-effect waves-light" value="MENU")
+                    div(class="row col s6").center
+                        div.panel-footer
+                            button(id="btnPrueba" type="submit" class="btn waves-effect waves-light" value="") ACTUALIZAR
+        //div(class="parallax-container")
+        //    div(class="parallax")
+        //        img(src="http://lorempixel.com/580/250/nature/1")

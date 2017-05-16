@@ -1,0 +1,24 @@
+extends graph_layout
+block content
+    div(class="section white")
+        div(class="row")
+            div(class="row col s10")
+                //h1 Welcome #{email}
+                label(class='dropdown-button blue-text' data-beloworigin="true" data-activates='dropdown2').right #{email}
+                    ul(id="dropdown2" class="dropdown-content")
+                        form(method="post" action="/profile" enctype="application/x-www-form-urlencoded")
+                            div.panel-footer
+                                input(type="submit" class="btn-flat" value="PERFIL")
+                        form(method="get" action="/" enctype="application/x-www-form-urlencoded")
+                            div.panel-footer
+                                input(type="submit" class="btn-flat" value="SALIR")
+    div(class="row container")
+        div(class="row col s12 card-panel grey lighten-5 ").panel-heading.center
+            h1 RESULTADO DE NIVEL DE AUTOREGULACION
+        div(class="row col s12")
+            div(class="row col s6")
+                h4.center ALTO 75 - 100 %
+            div(class="row col s6")
+                div(id="piechart"  style="width: 900px; height: 500px;")
+        div(class="col s12")
+            a(href="#!") COMO DESARROLLAR LA AUTOREGULACION

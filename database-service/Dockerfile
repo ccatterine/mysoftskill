@@ -1,0 +1,8 @@
+FROM mysql:latest
+
+ENV MYSQL_ROOT_PASSWORD 123
+ENV MYSQL_DATABASE MYSOFTSKILLS
+ENV MYSQL_USER calo
+ENV MYSQL_PASSWORD 123
+
+ADD script.sql /docker-entrypoint-initdb.d

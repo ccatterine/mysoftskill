@@ -1,0 +1,16 @@
+version: '2'
+services:
+  mysoftskillsapi:
+    build:  ./mysoftskills-service
+    ports:
+      - "8123:8123"
+    depends_on:
+      - database
+    environment:
+      - DATABASE_HOST=database
+    volumes:
+      - ./mysoftskills-service/api:/api
+  database:
+    build:  ./database-service
+    ports:
+      - "3306:3306"
